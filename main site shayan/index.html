@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shayan-esf</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+<!--click rast mouse-->
+<style type="text/css">
+    /** {*/
+    /*    margin: 0;*/
+    /*    padding: 0;*/
+    /*    box-sizing: border-box;*/
+    /*    font-family: sans-serif;*/
+    /*    letter-spacing: 1px;*/
+    /*    transition: 0.2s;*/
+    /*}*/
+
+    /* body {
+        background: #0b355c;
+    } */
+
+    hr{
+        margin: 5px 0px;
+    }
+
+    .manu-bar {
+        position: absolute;
+        background-color: rgb(217, 213, 213);
+        border-radius: 13px;
+        overflow: hidden;
+        box-shadow: 0px 0px 20px #00000024;
+        transition: clip-path .2s ease-in-out;
+        clip-path: circle(0% at 0% 0%);
+        z-index: 1000;
+    }
+    .manu-bar ul{
+        padding: 10px 0px;
+        margin: 0px;
+        min-width: 10.3rem;
+        list-style: none;
+
+    }
+    .manu-bar ul li{
+        width: 100%;
+        height: 100%;
+        padding-bottom: 7px;
+        padding-top: 7px;
+        position: relative;
+    }
+    .manu-bar ul li a{
+        text-decoration: none;
+        color: rgb(34, 34, 34);
+        display: flex;
+        align-items: center;
+        padding: 0px 61px 0px 14px;
+        z-index: 2;
+        position: relative;
+    }
+    .manu-bar ul li a svg{
+        margin-right: 20px;
+    }
+    .manu-bar ul li:hover svg{
+        fill: #fff;
+    }
+    .manu-bar ul li:hover a{
+        color: #fff;
+    }
+    .manu-bar ul li:hover h5{
+        width: 9rem;
+    }
+    h5{
+        width: 0rem;
+        height: 2rem;
+        background: linear-gradient(90deg, #0095ff 36%, #8ccfff 75%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 0px 25px 25px 0px;
+        transition: 0.2s;
+    }
+    .text-main{
+        text-align: center;
+    }
+</style>
+<!--end mouse-->
+<body>
+<!--  mouse section  -->
+<div class="manu-bar" id="manubar">
+    <ul>
+        <li>
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
+                     fill="#000000">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path
+                            d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" />
+                </svg>
+                Edit
+            </a>
+            <h5></h5>
+        </li>
+        <li>
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
+                     fill="#000000">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <circle cx="6" cy="18" fill="none" r="2" />
+                    <circle cx="12" cy="12" fill="none" r=".5" />
+                    <circle cx="6" cy="6" fill="none" r="2" />
+                    <path
+                            d="M9.64 7.64c.23-.5.36-1.05.36-1.64 0-2.21-1.79-4-4-4S2 3.79 2 6s1.79 4 4 4c.59 0 1.14-.13 1.64-.36L10 12l-2.36 2.36C7.14 14.13 6.59 14 6 14c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4c0-.59-.13-1.14-.36-1.64L12 14l7 7h3v-1L9.64 7.64zM6 8c-1.1 0-2-.89-2-2s.9-2 2-2 2 .89 2 2-.9 2-2 2zm0 12c-1.1 0-2-.89-2-2s.9-2 2-2 2 .89 2 2-.9 2-2 2zm6-7.5c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5zM19 3l-6 6 2 2 7-7V3z" />
+                </svg>
+                Cut
+            </a>
+            <h5></h5>
+        </li>
+        <hr>
+        <li>
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
+                     fill="#000000">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path
+                            d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm-1 4l6 6v10c0 1.1-.9 2-2 2H7.99C6.89 23 6 22.1 6 21l.01-14c0-1.1.89-2 1.99-2h7zm-1 7h5.5L14 6.5V12z" />
+                </svg>
+                Copy
+            </a>
+            <h5></h5>
+        </li>
+        <li>
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
+                     fill="#000000">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path
+                            d="M19 2h-4.18C14.4.84 13.3 0 12 0c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm7 18H5V4h2v3h10V4h2v16z" />
+                </svg>
+                Paste
+            </a>
+            <h5></h5>
+        </li>
+        <hr>
+        <li>
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
+                     fill="#000000">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path
+                            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+                </svg>
+                Quit
+            </a>
+            <h5></h5>
+        </li>
+        <li>
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
+                     fill="#000000">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
+                </svg>
+                Delete
+            </a>
+            <h5></h5>
+        </li>
+        <li>
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
+                     fill="#000000">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path
+                            d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z" />
+                </svg>
+                Share
+            </a>
+            <h5></h5>
+        </li>
+    </ul>
+</div>
+<!--end-->
+<!-- header section starts  -->
+
+<header>
+<!--    class="wow animate__animated animate__bounce "-->
+    <div class="user">
+        <div class="porof1">
+           <img src="/img/porof.JPG" alt="">
+        </div>
+
+        <h3 class="name" style="--clr:#00ade1" > <a href="#" data-text="&nbsp; Ux/Ui Designer">&nbsp;front end developer&nbsp;</a></h3>
+        <p class="post">          </p>
+
+    </div>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">home</a></li>
+            <li><a href="#about">about</a></li>
+
+            <li><a href="#portfolio">portfolio</a></li>
+            <li><a href="#contact">contact</a></li>
+
+        </ul>
+    </nav>
+    <div class="follow" >
+        <a href="#" style="--clr:#1877f2;"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" style="--clr:#171515;"><i class="fa-brands fa-github"></i></a>
+        <a href="#" style="--clr:#25d366;"> <i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#" style="--clr:#0088cc;"><i class="fa-brands fa-telegram"></i></a>
+    </div>
+</header>
+
+<!-- header section ends -->
+
+<div id="menu" class="fas fa-bars"></div>
+
+<!-- home section starts  -->
+
+<section class="home wow animate__animated animate__fadeInLeft animate__delay-1s  animate__slower " id="home">
+
+    <h3>HI THERE !</h3>
+    <h1>I'M <span>Shayan Esfahanizadeh</span></h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio deserunt aspernatur fugiat minus enim ullam repudiandae sint sed magnam tenetur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, at.
+    </p>
+    <a href="#about"><button class="btn">about me <i class="fas fa-user"></i></button></a>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- about section starts  -->
+
+<section class="about wow animate__animated animate__fadeInDown animate__delay-4s animate__slower   " id="about">
+
+<h1 class="heading"> <span>about</span> me </h1>
+
+<div class="row">
+
+    <div class="info">
+        <h3> <span> name : </span> Shayan Esfahanizadeh </h3>
+        <h3> <span> age : </span> 20 </h3>
+        <h3> <span> qualification : </span> --- </h3>
+        <h3> <span> post : </span> updating </h3>
+        <h3> <span> language : </span> persian </h3>
+        <a href="#"><button class="btn"> download CV <i class="fas fa-download"></i> </button></a>
+    </div>
+
+    <div class="counter">
+
+        <div class="box">
+            <span>2+</span>
+            <h3>years of experience</h3>
+        </div>
+
+        <div class="box">
+            <span>15+</span>
+            <h3>porject completed</h3>
+        </div>
+
+
+
+        <div class="box">
+            <h3>Proactivity</h3>
+            <h3> Agile</h3>
+            <h3>scrum</h3>
+            <h3>unit test</h3>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<section class="portfolio" id="portfolio">
+
+<h1 class="heading"> my <span>portfolio</span> </h1>
+
+<div class="box-container">
+
+    <div class="box">
+        <img src="/img/htmlcss.jpg" alt="">
+    </div>
+
+    <div class="box">
+        <img src="/img/download.png" alt="">
+    </div>
+
+    <div class="box">
+        <img src="/img/download.jpg" alt="">
+    </div>
+
+    <div class="box">
+        <img src="/img/js.png" alt="">
+    </div>
+
+    <div class="box">
+        <img src="/img/2022-03-29_15h22_01.jpg" alt="">
+    </div>
+
+    <div class="box">
+        <img src="/images.png" alt="">
+    </div>
+    <a href="#about" style="display:block;"><button class="btn">more <i class="fa-solid fa-arrow-right"></i></button></a>
+</div>
+
+</section>
+
+<!-- portfolio section ends -->
+
+<!-- contact section starts  -->
+
+<section class="contact" id="contact">
+
+<h1 class="heading"> <span>contact</span> me </h1>
+
+<div class="row">
+
+    <div class="content">
+
+        <h3 class="title">contact info</h3>
+
+        <div class="info">
+            <h3> <i class="fas fa-envelope"></i> shayanesfahanizadeh81@gmail.com </h3>
+            <h3> <i class="fas fa-phone"></i> +989333007274 </h3>
+            <h3> <i class="fas fa-map-marker-alt"></i>Tehran, iran  </h3>
+        </div>
+
+    </div>
+
+    <form action="">
+
+        <input type="text" placeholder="name" class="box">
+        <input type="email" placeholder="email" class="box">
+        <input type="text" placeholder="project" class="box">
+        <textarea name="" id="" cols="30" rows="10" class="box message" placeholder="message"></textarea>
+        <button type="submit" class="btn"> send <i class="fas fa-paper-plane"></i> </button>
+
+    </form>
+
+</div>
+
+</section>
+
+
+<!-- contact section ends -->
+
+
+<!-- scroll top button  -->
+
+<a href="#home" class="top">
+    <img src="images/scroll-top-img.png" alt="">
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="/js/script.js"></script>
+<script>
+    document.onclick = hideMenu;
+    document.oncontextmenu = rightClick;
+
+    function hideMenu() {
+        document.getElementById(
+            "manubar").style.clipPath = "circle(0% at 0% 0%)"
+    }
+
+    function rightClick(e) {
+        e.preventDefault();
+
+        if (document.getElementById(
+            "manubar").style.cliPath == "circle(75%)")
+            hideMenu();
+        else {
+            var menu = document
+                .getElementById("manubar")
+
+            menu.style.clipPath = "circle(75%)";
+            menu.style.left = e.pageX + "px";
+            menu.style.top = e.pageY + "px";
+        }
+    }
+</script>
+<script src="js/wow.min.js"></script>
+<script>
+    new WOW().init();
+    let logo = document.querySelector(".porof1");
+    logo.addEventListener("mouseover",function(){
+        logo.classList.add("animate__animated","animate__bounce");
+        setTimeout(function(){
+            logo.classList.remove("animate__animated","animate__bounce")
+        },1000)
+    } )
+</script>
+</body>
+</html>
