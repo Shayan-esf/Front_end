@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/main.css" />
+        <title>برنامه نویسی - قالب پیشرفته</title>
+    <script src="jquery.js" charset="utf-8" ></script>
+    </head>
+    <body>
+ <div class="container">
+     <form action="">
+         <h2>Register form</h2>
+         <input type="text" name="" id="" placeholder="username" class="name">
+         <input type="email" name="" id="" placeholder="email" class="email">
+         <input type="password" name="" id="" placeholder="password"  >
+         <input  type="text" name="" id="" placeholder="age" class="age">
+         <strong>country: </strong> <select class="country">
+            <option  >iran</option>
+            <option  >iraq</option>
+            <option >us</option>
+            <option >uk</option>
+            <option >other</option>
+         </select>
+         <input type="button" value="Register" class="btn" >
+
+
+        </form>
+ </div>
+      
+<div class="demo">
+    <div class="wrapper">
+        
+        <div class="test">
+            <h2>welcome</h2>
+        <p class="name">Mr. <span></span></p>
+        <p class="email">your Email: <span></span></p>
+        <p class="age">your age:<span></span></p>
+        <p class="country">From: <span></span></p>
+        <!-- <svg class="ab" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="visual" viewBox="0 0 960 540" width="960" height="540" version="1.1"><rect x="0" y="0" width="960" height="540" fill="#114695"/><path d="M479 540L463.7 517.5C448.3 495 417.7 450 453.7 405C489.7 360 592.3 315 600.7 270C609 225 523 180 509.5 135C496 90 555 45 584.5 22.5L614 0L960 0L960 22.5C960 45 960 90 960 135C960 180 960 225 960 270C960 315 960 360 960 405C960 450 960 495 960 517.5L960 540Z" fill="#F7770F" stroke-linecap="round" stroke-linejoin="miter"/></svg> -->
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+<script type="text/javascript">
+$('form .name').change(function(){
+    var value = $(this).val();
+    $('.demo .name').children('span').text(value);
+});
+$('form .email').change(function(){
+    var value = $(this).val();
+    $('.demo .email').children('span').text(value);
+});
+$('form .age').change(function(){
+    var value = $(this).val();
+    $('.demo .age').children('span').text(value);
+});
+$('form .country').change(function(){
+    var value = $(this).val();
+    $('.demo .country').children('span').text(value);
+});
+</script>
+</body>
+</html>
